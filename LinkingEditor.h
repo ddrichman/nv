@@ -14,6 +14,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import <objc/runtime.h>
+#import "HGMarkdownHighlighter.h"
 
 @class NotesTableView;
 @class NoteObject;
@@ -53,6 +54,9 @@
     NSString *activeParagraphPastCursor;
     NSString *activeParagraphBeforeCursor;
 //    BOOL clipboardHasLink;
+	
+	#pragma mark DDR additions
+	HGMarkdownHighlighter *highlighter;
 }
 
 @property (readonly) NSString *activeParagraphBeforeCursor;
@@ -128,6 +132,7 @@
 - (void)hideTextFinderIfNecessary:(NSNotification *)aNotification;
 - (IBAction)toggleLayoutOrientation:(id)sender;
 #endif
+
 //
 @end
 

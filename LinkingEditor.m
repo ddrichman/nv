@@ -109,6 +109,10 @@ CGFloat _perceptualDarkness(NSColor*a);
     
 	//[center addObserver:self selector:@selector(updateTextColors) name:NSSystemColorsDidChangeNotification object:nil]; // recreate gradient if needed
     //	NoMods = YES;
+	
+	highlighter = [[HGMarkdownHighlighter alloc]
+                   initWithTextView:self];
+    [highlighter activate];
    
 	outletObjectAwoke(self);
 }
